@@ -13,4 +13,15 @@ extension UIViewController {
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alertVC, animated: true, completion: nil)
     }
+    
+    func showUrl(url:String)  {
+        guard let url = URL(string:url) else {
+            return
+        }
+        UIApplication.shared.open(url, options: [UIApplication.OpenExternalURLOptionsKey : Any](), completionHandler: {success in
+            if !success {
+                self.showAlert(title: "Error", message:"Invalid url provided")
+            }
+        })
+    }
 }

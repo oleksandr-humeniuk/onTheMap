@@ -48,10 +48,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             showAlert(title: Strings.LOGIN_FAILED_TITLE,message: error!.localizedDescription)
             return
         }
-        navigateToMap()
+        navigateToHomeScreen()
     }
     
-    private func navigateToMap() {
+    private func navigateToHomeScreen() {
         performSegue(withIdentifier: HOME_SCREED_SEGUE_ID, sender: nil)
     }
     

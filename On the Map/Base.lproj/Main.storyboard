@@ -182,14 +182,37 @@
         <!--Map-->
         <scene sceneID="jTx-Hq-Jbf">
             <objects>
-                <viewController id="MTy-cU-MKe" sceneMemberID="viewController">
+                <viewController id="MTy-cU-MKe" customClass="StudentMapController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xsf-ze-TSQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WmK-DC-MZr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MTy-cU-MKe" id="mTw-xb-SRm"/>
+                                </connections>
+                            </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="QnX-o6-D3m">
+                                <rect key="frame" x="188.5" y="432" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="G5n-DX-6dk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WmK-DC-MZr" firstAttribute="leading" secondItem="G5n-DX-6dk" secondAttribute="leading" id="57R-Kt-mXc"/>
+                            <constraint firstItem="QnX-o6-D3m" firstAttribute="centerY" secondItem="G5n-DX-6dk" secondAttribute="centerY" id="BV2-do-lhz"/>
+                            <constraint firstItem="G5n-DX-6dk" firstAttribute="trailing" secondItem="WmK-DC-MZr" secondAttribute="trailing" id="Y5r-2j-Fxq"/>
+                            <constraint firstItem="QnX-o6-D3m" firstAttribute="centerX" secondItem="G5n-DX-6dk" secondAttribute="centerX" id="qCO-lk-tcm"/>
+                            <constraint firstItem="WmK-DC-MZr" firstAttribute="top" secondItem="G5n-DX-6dk" secondAttribute="top" id="r6u-I0-j3J"/>
+                            <constraint firstItem="G5n-DX-6dk" firstAttribute="bottom" secondItem="WmK-DC-MZr" secondAttribute="bottom" id="sHO-cd-hwM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="Ler-no-Ch8"/>
+                    <connections>
+                        <outlet property="mapView" destination="WmK-DC-MZr" id="Ja9-Xf-GUb"/>
+                        <outlet property="progressView" destination="QnX-o6-D3m" id="Kcq-OF-ucZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvn-9W-TFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

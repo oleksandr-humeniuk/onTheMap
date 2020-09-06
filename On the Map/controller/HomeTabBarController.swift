@@ -18,7 +18,9 @@ class HomeTabBarController: UITabBarController {
     }
     
     @IBAction func onAddPointClicked(_ sender: Any) {
+  
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchStudents()

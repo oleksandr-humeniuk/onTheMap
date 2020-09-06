@@ -37,13 +37,6 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let url = URL(string:students[(indexPath as NSIndexPath).row].mediaURL) else {
-            return
-        }
-        UIApplication.shared.open(url, options: [UIApplication.OpenExternalURLOptionsKey : Any](), completionHandler: {success in
-            if !success {
-                self.showAlert(title: "Error", message:"Invalid url provided")
-            }
-        })
+        showUrl(url:students[(indexPath as NSIndexPath).row].mediaURL)
     }
 }

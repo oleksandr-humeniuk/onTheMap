@@ -17,6 +17,7 @@
 		4A025F8825057AE2006D1DDE /* GetStudenInformationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F8725057AE2006D1DDE /* GetStudenInformationResponse.swift */; };
 		4A025F8A25057DB6006D1DDE /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F8925057DB6006D1DDE /* StudentListViewController.swift */; };
 		4A025F8C25058217006D1DDE /* StudentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F8B25058217006D1DDE /* StudentCellView.swift */; };
+		4A025F8E25058CAB006D1DDE /* StudentMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F8D25058CAB006D1DDE /* StudentMapController.swift */; };
 		4A1E5ADB25050DB400CEBB45 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5ADA25050DB400CEBB45 /* LoginRequest.swift */; };
 		4A1E5ADF25050F6D00CEBB45 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5ADE25050F6D00CEBB45 /* Endpoints.swift */; };
 		4A1E5AE825051F5200CEBB45 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5AE725051F5200CEBB45 /* NetworkClient.swift */; };
@@ -46,6 +47,7 @@
 		4A025F8725057AE2006D1DDE /* GetStudenInformationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStudenInformationResponse.swift; sourceTree = "<group>"; };
 		4A025F8925057DB6006D1DDE /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
 		4A025F8B25058217006D1DDE /* StudentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCellView.swift; sourceTree = "<group>"; };
+		4A025F8D25058CAB006D1DDE /* StudentMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMapController.swift; sourceTree = "<group>"; };
 		4A1E5ADA25050DB400CEBB45 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		4A1E5ADE25050F6D00CEBB45 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		4A1E5AE725051F5200CEBB45 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				4A025F7925056E55006D1DDE /* HomeTabBarController.swift */,
 				4A025F7F25057405006D1DDE /* UIViewController+Alert.swift */,
 				4A025F8925057DB6006D1DDE /* StudentListViewController.swift */,
+				4A025F8D25058CAB006D1DDE /* StudentMapController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				4A025F8625057949006D1DDE /* GetStudentInformationInteractor.swift in Sources */,
 				4A025F7C25057068006D1DDE /* LogoutInteractor.swift in Sources */,
 				4AE7E4AD25055B08003D6738 /* LoginTextField.swift in Sources */,
+				4A025F8E25058CAB006D1DDE /* StudentMapController.swift in Sources */,
 				4A1E5AEA2505209B00CEBB45 /* LoginResponse.swift in Sources */,
 				4A1E5ADF25050F6D00CEBB45 /* Endpoints.swift in Sources */,
 				4A025F8825057AE2006D1DDE /* GetStudenInformationResponse.swift in Sources */,
