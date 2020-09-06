@@ -9,7 +9,9 @@ import Foundation
 
 class NetworkClient {
     
-    class func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
+    class func taskForGETRequest<ResponseType: Decodable>(url: URL,
+                                                          responseType: ResponseType.Type,
+                                                          completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             handleResponse(data: data, error: error, completion: completion)
         }
@@ -18,7 +20,10 @@ class NetworkClient {
         return task
     }
     
-    class func taskForPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: URL, requestBody: RequestType, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) {
+    class func taskForPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: URL,
+                                                                                   requestBody: RequestType,
+                                                                                   responseType: ResponseType.Type,
+                                                                                   completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         let jsonBody = try! JSONEncoder().encode(requestBody)
@@ -28,6 +33,22 @@ class NetworkClient {
             handleResponse(data: data, error: error, completion: completion)
         }
         task.resume()
+        return task
+    }
+    
+    class func taskForDELETERequest<RequestType: Encodable, ResponseType: Decodable>(url: URL,
+                                                                                     requestBody: RequestType?,
+                                                                                     responseType: ResponseType.Type,
+                                                                                     completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask{
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        request.httpBody = try? JSONEncoder().encode(requestBody)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            handleResponse(data: data, error: error, completion: completion)
+        }
+        task.resume()
+        return task
     }
     
     private class func handleResponse<ResponseType:Decodable>(data:Data? ,

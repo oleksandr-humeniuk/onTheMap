@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A025F7A25056E55006D1DDE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F7925056E55006D1DDE /* HomeTabBarController.swift */; };
+		4A025F7C25057068006D1DDE /* LogoutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F7B25057068006D1DDE /* LogoutInteractor.swift */; };
+		4A025F7E250571E3006D1DDE /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F7D250571E3006D1DDE /* LogoutRequest.swift */; };
+		4A025F8025057405006D1DDE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F7F25057405006D1DDE /* UIViewController+Alert.swift */; };
+		4A025F82250574FA006D1DDE /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F81250574FA006D1DDE /* LogoutResponse.swift */; };
+		4A025F842505769B006D1DDE /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F832505769B006D1DDE /* StudentInformation.swift */; };
+		4A025F8625057949006D1DDE /* GetStudentInformationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F8525057949006D1DDE /* GetStudentInformationInteractor.swift */; };
+		4A025F8825057AE2006D1DDE /* GetStudenInformationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F8725057AE2006D1DDE /* GetStudenInformationResponse.swift */; };
+		4A025F8A25057DB6006D1DDE /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F8925057DB6006D1DDE /* StudentListViewController.swift */; };
+		4A025F8C25058217006D1DDE /* StudentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A025F8B25058217006D1DDE /* StudentCellView.swift */; };
 		4A1E5ADB25050DB400CEBB45 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5ADA25050DB400CEBB45 /* LoginRequest.swift */; };
 		4A1E5ADF25050F6D00CEBB45 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5ADE25050F6D00CEBB45 /* Endpoints.swift */; };
-		4A1E5AE425051A5600CEBB45 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5AE325051A5600CEBB45 /* BaseViewController.swift */; };
 		4A1E5AE825051F5200CEBB45 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5AE725051F5200CEBB45 /* NetworkClient.swift */; };
 		4A1E5AEA2505209B00CEBB45 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5AE92505209B00CEBB45 /* LoginResponse.swift */; };
 		4A1E5AED2505214300CEBB45 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E5AEC2505214300CEBB45 /* LoginInteractor.swift */; };
@@ -27,9 +36,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A025F7925056E55006D1DDE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		4A025F7B25057068006D1DDE /* LogoutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInteractor.swift; sourceTree = "<group>"; };
+		4A025F7D250571E3006D1DDE /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
+		4A025F7F25057405006D1DDE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		4A025F81250574FA006D1DDE /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
+		4A025F832505769B006D1DDE /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		4A025F8525057949006D1DDE /* GetStudentInformationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStudentInformationInteractor.swift; sourceTree = "<group>"; };
+		4A025F8725057AE2006D1DDE /* GetStudenInformationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStudenInformationResponse.swift; sourceTree = "<group>"; };
+		4A025F8925057DB6006D1DDE /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		4A025F8B25058217006D1DDE /* StudentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCellView.swift; sourceTree = "<group>"; };
 		4A1E5ADA25050DB400CEBB45 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		4A1E5ADE25050F6D00CEBB45 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		4A1E5AE325051A5600CEBB45 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4A1E5AE725051F5200CEBB45 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		4A1E5AE92505209B00CEBB45 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		4A1E5AEC2505214300CEBB45 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -74,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				4A1E5ADA25050DB400CEBB45 /* LoginRequest.swift */,
+				4A025F7D250571E3006D1DDE /* LogoutRequest.swift */,
 			);
 			path = request;
 			sourceTree = "<group>";
@@ -83,6 +102,9 @@
 			children = (
 				4A1E5AE92505209B00CEBB45 /* LoginResponse.swift */,
 				4AE7E4A925055122003D6738 /* ErrorResponse.swift */,
+				4A025F81250574FA006D1DDE /* LogoutResponse.swift */,
+				4A025F832505769B006D1DDE /* StudentInformation.swift */,
+				4A025F8725057AE2006D1DDE /* GetStudenInformationResponse.swift */,
 			);
 			path = response;
 			sourceTree = "<group>";
@@ -91,7 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				4AD2F19025043F4A0046F98D /* LoginViewController.swift */,
-				4A1E5AE325051A5600CEBB45 /* BaseViewController.swift */,
+				4A025F7925056E55006D1DDE /* HomeTabBarController.swift */,
+				4A025F7F25057405006D1DDE /* UIViewController+Alert.swift */,
+				4A025F8925057DB6006D1DDE /* StudentListViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -109,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				4A1E5AEC2505214300CEBB45 /* LoginInteractor.swift */,
+				4A025F7B25057068006D1DDE /* LogoutInteractor.swift */,
+				4A025F8525057949006D1DDE /* GetStudentInformationInteractor.swift */,
 			);
 			path = intercators;
 			sourceTree = "<group>";
@@ -152,6 +178,7 @@
 				4AE7E4AC25055B08003D6738 /* LoginTextField.swift */,
 				4AE7E4AE25055B84003D6738 /* UIColor.swift */,
 				4AE7E4B225055D91003D6738 /* LoginButton.swift */,
+				4A025F8B25058217006D1DDE /* StudentCellView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -228,16 +255,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AD2F19125043F4A0046F98D /* LoginViewController.swift in Sources */,
+				4A025F7E250571E3006D1DDE /* LogoutRequest.swift in Sources */,
 				4AE7E4AF25055B84003D6738 /* UIColor.swift in Sources */,
+				4A025F8025057405006D1DDE /* UIViewController+Alert.swift in Sources */,
+				4A025F7A25056E55006D1DDE /* HomeTabBarController.swift in Sources */,
 				4AD2F18D25043F4A0046F98D /* AppDelegate.swift in Sources */,
+				4A025F842505769B006D1DDE /* StudentInformation.swift in Sources */,
+				4A025F8A25057DB6006D1DDE /* StudentListViewController.swift in Sources */,
 				4AD2F18F25043F4A0046F98D /* SceneDelegate.swift in Sources */,
 				4A1E5ADB25050DB400CEBB45 /* LoginRequest.swift in Sources */,
+				4A025F8C25058217006D1DDE /* StudentCellView.swift in Sources */,
 				4A1E5AE825051F5200CEBB45 /* NetworkClient.swift in Sources */,
+				4A025F82250574FA006D1DDE /* LogoutResponse.swift in Sources */,
 				4AE7E4AA25055122003D6738 /* ErrorResponse.swift in Sources */,
+				4A025F8625057949006D1DDE /* GetStudentInformationInteractor.swift in Sources */,
+				4A025F7C25057068006D1DDE /* LogoutInteractor.swift in Sources */,
 				4AE7E4AD25055B08003D6738 /* LoginTextField.swift in Sources */,
-				4A1E5AE425051A5600CEBB45 /* BaseViewController.swift in Sources */,
 				4A1E5AEA2505209B00CEBB45 /* LoginResponse.swift in Sources */,
 				4A1E5ADF25050F6D00CEBB45 /* Endpoints.swift in Sources */,
+				4A025F8825057AE2006D1DDE /* GetStudenInformationResponse.swift in Sources */,
 				4A1E5AED2505214300CEBB45 /* LoginInteractor.swift in Sources */,
 				4AE7E4B325055D91003D6738 /* LoginButton.swift in Sources */,
 			);

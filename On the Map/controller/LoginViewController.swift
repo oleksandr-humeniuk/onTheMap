@@ -10,7 +10,7 @@ import UIKit
 fileprivate let HOME_SCREED_SEGUE_ID = "toHomeScreen"
 fileprivate let SIGN_UP_URL = "https://auth.udacity.com/sign-up"
 
-class LoginViewController: BaseViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     struct Strings {
         fileprivate static let LOGIN_FAILED_TITLE = "Login failed"
@@ -23,8 +23,10 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTextField.text = ""
         emailTextField.delegate = self
         passwordTextField.delegate = self
+       
         showProgress(false)
     }
     
