@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvn-9W-TFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061" y="-815"/>
+            <point key="canvasLocation" x="2623" y="-816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lyW-w2-nEn">
@@ -316,6 +316,9 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VMi-RX-AEU">
+                                <rect key="frame" x="-1810" y="435" width="2036" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yBl-Mk-vZ9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -325,18 +328,22 @@
                             <constraint firstItem="SwX-VR-MwK" firstAttribute="top" secondItem="cc1-fb-DyS" secondAttribute="bottom" constant="40" id="GQN-cn-dfe"/>
                             <constraint firstItem="cc1-fb-DyS" firstAttribute="leading" secondItem="yBl-Mk-vZ9" secondAttribute="leading" id="K1z-7R-es5"/>
                             <constraint firstItem="SwX-VR-MwK" firstAttribute="centerX" secondItem="yBl-Mk-vZ9" secondAttribute="centerX" id="O8d-ec-a7c"/>
+                            <constraint firstItem="VMi-RX-AEU" firstAttribute="centerY" secondItem="yBl-Mk-vZ9" secondAttribute="centerY" id="iFw-tq-XRr"/>
                             <constraint firstItem="SwX-VR-MwK" firstAttribute="trailing" secondItem="yBl-Mk-vZ9" secondAttribute="trailing" constant="-16" id="mWx-Ge-pdg"/>
                             <constraint firstItem="cc1-fb-DyS" firstAttribute="trailing" secondItem="yBl-Mk-vZ9" secondAttribute="trailing" id="qOh-Fe-Ny6"/>
+                            <constraint firstItem="VMi-RX-AEU" firstAttribute="centerX" secondItem="yBl-Mk-vZ9" secondAttribute="centerX" id="xvO-G0-gjX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="findButton" destination="qiz-gS-YYa" id="Mjk-C6-G2t"/>
                         <outlet property="locationTextField" destination="8bB-2n-fkQ" id="d1g-1V-gRJ"/>
+                        <outlet property="progressView" destination="VMi-RX-AEU" id="rVM-mE-PSw"/>
                         <outlet property="urlTextField" destination="3Ys-bZ-F9U" id="TT8-Y6-9VA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIx-cF-Bxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3271" y="-103"/>
+            <point key="canvasLocation" x="3269.5652173913045" y="-103.125"/>
         </scene>
         <!--Add Location Controller-->
         <scene sceneID="WxF-3j-C9v">

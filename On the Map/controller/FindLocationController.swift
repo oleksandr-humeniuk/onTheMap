@@ -16,7 +16,15 @@ class FindLocationController: UIViewController {
     }
     
     @IBOutlet weak var locationTextField: UdacityTextField!
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
     @IBOutlet weak var urlTextField: UdacityTextField!
+    @IBOutlet weak var findButton: UdacityButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        showProgress(false)
+    }
+    
     
     @IBAction func onFindClicked(_ sender: Any) {
         let url = urlTextField.text ?? ""
@@ -26,7 +34,9 @@ class FindLocationController: UIViewController {
         }
         
         let location = locationTextField.text ?? ""
+        showProgress(true)
         FindLocationInteractor.find(location: location,completion: {clLocation,error in
+            self.showProgress(false)
             guard let clLocation = clLocation else{
                 self.showAlert(title: Strings.LOCATION_ERROR_TITLE, message: error!.localizedDescription)
                 return
@@ -45,5 +55,12 @@ class FindLocationController: UIViewController {
         controller.mapName = mapName
         controller.cllLocation = location
         present(controller, animated: true, completion: nil)
+    }
+    
+    private func showProgress(_ progress:Bool){
+        progressView.isHidden = !progress
+        findButton.isEnabled = !progress
+        locationTextField.isEnabled = !progress
+        urlTextField.isEnabled = !progress
     }
 }
