@@ -15,7 +15,7 @@ class LoginInteractor {
     
     class func login(username:String,
                      password:String,
-                     completion: @escaping (LoginResponse?, Error?)->Void) {
+                     completion: @escaping (User?, Error?)->Void) {
         
         guard validateEmail(username) else {
             completion(nil,ErrorResponse(status: 0, error: INVALID_EMAIL_ERROR))
@@ -30,13 +30,21 @@ class LoginInteractor {
                                          requestBody: LoginRequest(udacity: Udacity(username:username,password:password)),
                                          responseType: LoginResponse.self,
                                          completion: {loginResponse,error in
-                                            completion(loginResponse,error)
+                                            guard let loginResponse = loginResponse else{
+                                                completion(nil,error)
+                                                return
+                                            }
+                                            fetchUser(id: loginResponse.account.key, completion: completion)
                                          })
     }
-    
+    private class func fetchUser(id:String,completion: @escaping(User?,Error?)->Void) {
+        NetworkClient.taskForGETRequest(url: Endoints.userDetails(userId: id).url,
+                                        responseType: User.self,
+                                        completion: completion)
+    }
     private class func validateEmail(_ enteredEmail: String) -> Bool {
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", EMAIL_PATTERN)
         return emailPredicate.evaluate(with: enteredEmail)
-        
     }
+    
 }

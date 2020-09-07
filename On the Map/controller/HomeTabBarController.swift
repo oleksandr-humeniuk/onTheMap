@@ -7,8 +7,9 @@
 
 import UIKit
 
-class HomeTabBarController: UITabBarController {
-    
+fileprivate let TO_LOGIN_IDENTIFIER = "toLogin"
+
+class HomeTabBarController: UITabBarController {    
     @IBAction func onLogoutClicked(_ sender: Any) {
         LogoutInteractor.logout(completion: handleLogout)
     }
@@ -21,8 +22,8 @@ class HomeTabBarController: UITabBarController {
   
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchStudents()
     }
     
@@ -31,7 +32,7 @@ class HomeTabBarController: UITabBarController {
             showAlert(message: error!.localizedDescription)
             return
         }
-        self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: TO_LOGIN_IDENTIFIER, sender: nil)
     }
     
     private func fetchStudents(){

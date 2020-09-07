@@ -18,7 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: LoginButton!
+    @IBOutlet weak var loginButton: UdacityButton!
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
@@ -42,12 +42,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         UIApplication.shared.open(url)
     }
     
-    private func handleLogin(response:LoginResponse?, error:Error?) {
+    private func handleLogin(response:User?, error:Error?) {
         showProgress(false)
         guard let response = response else {
             showAlert(title: Strings.LOGIN_FAILED_TITLE,message: error!.localizedDescription)
             return
         }
+        AppDelegate.user = response
         navigateToHomeScreen()
     }
     

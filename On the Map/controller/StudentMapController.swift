@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 
+fileprivate let MAP_PIN_IDENTIFIER = "pin"
 
 class StudentMapController: UIViewController, MKMapViewDelegate, HomeChildViewController {
     
@@ -39,13 +40,10 @@ class StudentMapController: UIViewController, MKMapViewDelegate, HomeChildViewCo
     
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        let reuseId = "pin"
-        
-        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: MAP_PIN_IDENTIFIER) as? MKPinAnnotationView
         
         if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: MAP_PIN_IDENTIFIER)
             pinView!.canShowCallout = true
             pinView!.pinTintColor = .red
             pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)

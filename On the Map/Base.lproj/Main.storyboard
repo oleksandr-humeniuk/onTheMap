@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bz9-xL-sUx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A4B-8N-fJF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
@@ -26,17 +26,17 @@
                                             <constraint firstAttribute="height" constant="128" id="A0C-zC-aHg"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J80-Wu-Ymp" userLabel="Email" customClass="LoginTextField" customModule="On_the_Map" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J80-Wu-Ymp" userLabel="Email" customClass="UdacityTextField" customModule="On_the_Map" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zNd-qM-nqp" userLabel="Password" customClass="LoginTextField" customModule="On_the_Map" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zNd-qM-nqp" userLabel="Password" customClass="UdacityTextField" customModule="On_the_Map" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="186" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMI-ZA-whh" userLabel="Login" customClass="LoginButton" customModule="On_the_Map" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMI-ZA-whh" userLabel="Login" customClass="UdacityButton" customModule="On_the_Map" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="232" width="382" height="30"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5U-dU-Hje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="-91"/>
+            <point key="canvasLocation" x="-749" y="-91"/>
         </scene>
         <!--List-->
         <scene sceneID="Ng9-rJ-uny">
@@ -221,7 +221,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lyW-w2-nEn">
             <objects>
-                <navigationController id="bz9-xL-sUx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="OnTheMap" id="bz9-xL-sUx" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="2j5-c4-U17"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HAI-vg-fQr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -233,7 +233,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQK-En-GiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="-91"/>
+            <point key="canvasLocation" x="657" y="244"/>
         </scene>
         <!--On the Map-->
         <scene sceneID="b10-BB-oUZ">
@@ -249,6 +249,7 @@
                             <barButtonItem title="Item" image="plus" catalog="system" id="nf3-m1-0Tu">
                                 <connections>
                                     <action selector="onAddPointClicked:" destination="Fns-zL-HfV" id="zJb-4s-es7"/>
+                                    <segue destination="clZ-rL-ssJ" kind="presentation" modalPresentationStyle="fullScreen" id="zWT-3N-7Mv"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Refresh" image="arrow.clockwise" catalog="system" id="wUn-0b-doQ">
@@ -266,13 +267,147 @@
                     <connections>
                         <segue destination="MTy-cU-MKe" kind="relationship" relationship="viewControllers" id="fcW-6S-Q57"/>
                         <segue destination="DUQ-Pw-ny5" kind="relationship" relationship="viewControllers" id="5V2-91-xjd"/>
+                        <segue destination="A4B-8N-fJF" kind="presentation" identifier="toLogin" modalPresentationStyle="fullScreen" id="H4u-O3-bsS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XC2-xs-uGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="-91"/>
+            <point key="canvasLocation" x="1442" y="-632"/>
+        </scene>
+        <!--Find Location Controller-->
+        <scene sceneID="6X6-Aw-NJN">
+            <objects>
+                <viewController id="clZ-rL-ssJ" customClass="FindLocationController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpr-hJ-5hu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SwX-VR-MwK">
+                                <rect key="frame" x="16" y="128" width="382" height="122"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8bB-2n-fkQ" userLabel="Location Text Field" customClass="UdacityTextField" customModule="On_the_Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Url" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Ys-bZ-F9U" userLabel="Url" customClass="UdacityTextField" customModule="On_the_Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="46" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-gS-YYa" customClass="UdacityButton" customModule="On_the_Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="382" height="30"/>
+                                        <state key="normal" title="Find Location"/>
+                                        <connections>
+                                            <action selector="onFindClicked:" destination="clZ-rL-ssJ" eventType="touchUpInside" id="Kh8-jQ-37O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cc1-fb-DyS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Find Location" id="W0p-Mh-g1d">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="bHl-Mt-gc4">
+                                            <connections>
+                                                <action selector="onCancelClicked:" destination="clZ-rL-ssJ" id="Tuw-Yb-A14"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yBl-Mk-vZ9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yBl-Mk-vZ9" firstAttribute="leading" secondItem="SwX-VR-MwK" secondAttribute="leading" constant="-16" id="6sk-G8-p3g"/>
+                            <constraint firstItem="cc1-fb-DyS" firstAttribute="top" secondItem="yBl-Mk-vZ9" secondAttribute="top" id="FeA-W2-AMt"/>
+                            <constraint firstItem="SwX-VR-MwK" firstAttribute="top" secondItem="cc1-fb-DyS" secondAttribute="bottom" constant="40" id="GQN-cn-dfe"/>
+                            <constraint firstItem="cc1-fb-DyS" firstAttribute="leading" secondItem="yBl-Mk-vZ9" secondAttribute="leading" id="K1z-7R-es5"/>
+                            <constraint firstItem="SwX-VR-MwK" firstAttribute="centerX" secondItem="yBl-Mk-vZ9" secondAttribute="centerX" id="O8d-ec-a7c"/>
+                            <constraint firstItem="SwX-VR-MwK" firstAttribute="trailing" secondItem="yBl-Mk-vZ9" secondAttribute="trailing" constant="-16" id="mWx-Ge-pdg"/>
+                            <constraint firstItem="cc1-fb-DyS" firstAttribute="trailing" secondItem="yBl-Mk-vZ9" secondAttribute="trailing" id="qOh-Fe-Ny6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationTextField" destination="8bB-2n-fkQ" id="d1g-1V-gRJ"/>
+                        <outlet property="urlTextField" destination="3Ys-bZ-F9U" id="TT8-Y6-9VA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIx-cF-Bxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3271" y="-103"/>
+        </scene>
+        <!--Add Location Controller-->
+        <scene sceneID="WxF-3j-C9v">
+            <objects>
+                <viewController storyboardIdentifier="AddLocation" modalPresentationStyle="fullScreen" id="1DT-ZO-kHh" customClass="AddLocationController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G8w-XZ-2fw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4l-Ls-cq3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Location" id="aLe-uA-5Di">
+                                        <barButtonItem key="leftBarButtonItem" title="Find Location" id="DH2-UK-ize">
+                                            <connections>
+                                                <action selector="onFindLocationClicked:" destination="1DT-ZO-kHh" id="aRX-XK-6hc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wc9-R2-8q6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1DT-ZO-kHh" id="c5e-a2-qKp"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08V-60-Af6" customClass="UdacityButton" customModule="On_the_Map" customModuleProvider="target">
+                                <rect key="frame" x="16" y="812" width="382" height="30"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="onFinishClicked:" destination="1DT-ZO-kHh" eventType="touchUpInside" id="zsq-f1-Ian"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Q32-Y8-kso">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AUw-Uo-LpK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V4l-Ls-cq3" firstAttribute="leading" secondItem="AUw-Uo-LpK" secondAttribute="leading" id="4Ti-kp-ZOZ"/>
+                            <constraint firstItem="wc9-R2-8q6" firstAttribute="top" secondItem="V4l-Ls-cq3" secondAttribute="bottom" id="EhM-WT-wnX"/>
+                            <constraint firstItem="08V-60-Af6" firstAttribute="leading" secondItem="AUw-Uo-LpK" secondAttribute="leading" constant="16" id="Li5-7B-OVc"/>
+                            <constraint firstItem="AUw-Uo-LpK" firstAttribute="bottom" secondItem="wc9-R2-8q6" secondAttribute="bottom" id="SLe-X8-Tn4"/>
+                            <constraint firstItem="08V-60-Af6" firstAttribute="bottom" secondItem="AUw-Uo-LpK" secondAttribute="bottom" constant="-20" id="d8C-SR-cSs"/>
+                            <constraint firstItem="AUw-Uo-LpK" firstAttribute="trailing" secondItem="08V-60-Af6" secondAttribute="trailing" constant="16" id="ea7-Up-RGS"/>
+                            <constraint firstItem="AUw-Uo-LpK" firstAttribute="trailing" secondItem="wc9-R2-8q6" secondAttribute="trailing" id="fsb-op-Pz0"/>
+                            <constraint firstItem="V4l-Ls-cq3" firstAttribute="top" secondItem="AUw-Uo-LpK" secondAttribute="top" id="jca-Vp-Cje"/>
+                            <constraint firstItem="wc9-R2-8q6" firstAttribute="leading" secondItem="AUw-Uo-LpK" secondAttribute="leading" id="k5t-VC-YKX"/>
+                            <constraint firstItem="Q32-Y8-kso" firstAttribute="centerY" secondItem="AUw-Uo-LpK" secondAttribute="centerY" id="mDu-RG-r7T"/>
+                            <constraint firstItem="Q32-Y8-kso" firstAttribute="centerX" secondItem="AUw-Uo-LpK" secondAttribute="centerX" id="uLV-6b-wlg"/>
+                            <constraint firstItem="V4l-Ls-cq3" firstAttribute="trailing" secondItem="AUw-Uo-LpK" secondAttribute="trailing" id="vOi-Bj-u0A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Wo-nY-iVB"/>
+                    <connections>
+                        <outlet property="finishButton" destination="08V-60-Af6" id="9cT-0b-vCj"/>
+                        <outlet property="mapView" destination="wc9-R2-8q6" id="adb-0d-FXE"/>
+                        <outlet property="progressView" destination="Q32-Y8-kso" id="bcB-Ky-rFu"/>
+                        <segue destination="bz9-xL-sUx" kind="presentation" identifier="toHomeScreen" modalPresentationStyle="fullScreen" id="QMb-fV-swd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rY1-SU-Xqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4668" y="-103"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QMb-fV-swd"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>

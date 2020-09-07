@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginButton: UIButton {
+class UdacityButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
